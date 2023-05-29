@@ -16,6 +16,14 @@ Tested but container only working with SD version 1.5 only
 Documented issue <a href = "https://github.com/AbdBarho/stable-diffusion-webui-docker/discussions/454
 "> here. </a>
 
+<code>
+docker compose --profile [ui] up --build
+for example:
+docker compose --profile invoke up --build
+or
+docker compose --profile auto up --build
+</code>
+
 ## source 2 testing docker image
 
 https://hub.docker.com/r/universonic/stable-diffusion-webui
@@ -32,3 +40,12 @@ SD_datadir
     models
     outputs
     localizations
+
+Again not working due SD models
+
+## Testing previos image form scratch
+
+docker build -t sd_testx .
+docker build -t sdtestx .
+
+docker run --gpus all -p 8080:8080 sdtestx
