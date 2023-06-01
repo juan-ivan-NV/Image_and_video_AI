@@ -49,3 +49,12 @@ docker build -t sd_testx .
 docker build -t sdtestx .
 
 docker run --gpus all -p 8080:8080 sdtestx
+
+
+
+copy a model from pc host to the container
+
+docker cp v2-1_768-nonema-pruned.ckpt 4794bf357665:app/stable-diffusion-webui/models/Stable-diffusion
+
+
+python3 launch.py
