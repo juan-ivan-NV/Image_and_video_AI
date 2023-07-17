@@ -45,6 +45,8 @@ Again not working due SD models
 
 ## Testing previos image form scratch
 
+https://github.com/universonic/docker-stable-diffusion-webui
+
 docker build -t sd_testx .
 docker build -t sdtestx .
 
@@ -57,4 +59,11 @@ copy a model from pc host to the container
 docker cp v2-1_768-nonema-pruned.ckpt 4794bf357665:app/stable-diffusion-webui/models/Stable-diffusion
 
 
-python3 launch.py
+sudo python3 launch.py
+http://localhost:8080/
+
+
+issue on ui 
+
+PermissionError: [Errno 13] Permission denied: 'outputs/txt2img-images'
+https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues
